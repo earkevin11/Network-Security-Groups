@@ -8,6 +8,10 @@
 
 # Important
 - Note: By default, there is no inbound rule to allow traffic from the internet to the VM!
+- Example: if a user wants to RDP into a VM, a inbound rule will need to be created within the NSG.
 - Rules in NSG must be created to allow inbound traffic
-- NSGs can be attached on the NIC or the subnet that contains the azure VMs.
+- NSGs can be attached on the <em> NIC </em> or the <em> subnet </em> that contains the azure VMs.
 - <em> You cannot apply NSG onto the entire virtual network. </em>
+
+
+
