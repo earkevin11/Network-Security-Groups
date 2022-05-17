@@ -13,5 +13,25 @@
 - NSGs can be attached on the <em> NIC </em> or the <em> subnet </em> that contains the azure VMs.
 - <em> You cannot apply NSG onto the entire virtual network. </em>
 
+# Remember: Traffic flows via the Network Interface (NIC) to the Virtual Machine, which is why the NSG is attached at the NIC level. 
+- Think *NSG* = *Firewall*
+
+# How to use NSGs?
+- Go to VM > Networking > Select the NSG
+- Inbound rules are used for traffic that flows into the VM
+- Outbound rules are used for traffic that flows out of the VM
+- Admins can associate NSGs with multiple subnets and NIC.
+# There are 3 default rules created in NSG inbound rules
+- 1. Allow all traffic within a VNet. This means if a VM tries to contact another VM within the same VNet. It will be allowed.
+- 2. Allow traffic onto a Azure Load Balancer
+- 3. All other traffic is denied inbound.
+
+# Outbound Traffic rules
+- 3 default rules in place
+- 1. Allow Vnet outbound if destination is in the same VNet
+- 2. Allow all internet outbound traffic
+- 3. Deny all other outbound traffic
+
+
 
 
