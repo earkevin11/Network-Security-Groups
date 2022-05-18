@@ -66,5 +66,29 @@
 
 <p/>
 
+# NSG - Installing applications and allowing requests
+- IT admins installing new applications will need to create an allow inbound rule in Azure AND configure the windows firewall within the OS.
+- Admins will need to add inbound rules at the OS level within Windows Server.
+- Configuring NSGs itself will not work.
 
+
+# Stateful nature of NSGs
+- Because an inbound request is allowed via inbound rules of the NSG, the response to the request is going to be allowed as well.
+- When a connection is initiated from the VM itself onto the internet, the outbound rule takes effect.
+- When admins make a request onto the VM, such as trying to access the IIS web server, the inbound rules take affect.
+
+# NSGs - Communication within network
+- Remember, all connections between VMs within the same network is ALLOWED because of the default rule.
+- Both VMs would be able to RDP into each other.
+
+<p align="center">
+  
+<img src="https://user-images.githubusercontent.com/104326475/169098879-116e3ce0-9248-436a-8dd9-ba3e28a92d1a.png" height="290%" width="290%" alt="review of vnets and VMs"/>
+
+<p/>
+
+
+# NSGs - Subnet level
+- NSGs can be attached at the NIC or Subnet level only.
+- Rules will have to be created and applied at the subnet level and NIC level in order to work.
 
