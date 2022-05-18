@@ -50,3 +50,21 @@
 <p/>
 
 
+# Configuring Inbound RDP rule
+- When configuring the RDP rule, best practice is to allow specific machines to RDP.
+
+# NSG - Priority settings
+- Requests will be evaluated based on the priority number.
+- Once a rule has been satisfied, it will not look at another rule.
+- Priority 310 - Allow80 rule - allows HTTP traffic back to the VM. Users will be able to request on port 80.
+- Priority 240 - Port_Deny_50_100 - denies all traffic going to the Virtual Network on port 50-100. 
+- The request to HTTP port 80 will go through Priority 240 first and stop there.
+
+<p align="center">
+  
+<img src="https://user-images.githubusercontent.com/104326475/169070903-170f8c71-0d6f-43a1-a324-a1686fd663fb.PNG" height="290%" width="290%" alt="review of vnets and VMs"/>
+
+<p/>
+
+
+
