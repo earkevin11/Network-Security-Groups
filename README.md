@@ -32,6 +32,19 @@
 - 2. Allow all internet outbound traffic
 - 3. Deny all other outbound traffic
 
+# Default inbound security rules
+<p align="center">
+  
+<img src="https://user-images.githubusercontent.com/104326475/168944457-62c786fc-da63-4ecd-831e-fe6e510ce4df.png" height="290%" width="290%" alt="review of vnets and VMs"/>
 
+<p/>
+
+
+# Default outbound security rules
+<p align="center">
+  
+<img src="https://user-images.githubusercontent.com/104326475/168944519-8c59e200-8fbb-44c7-8a62-0e3296384a85.png" height="290%" width="290%" alt="review of vnets and VMs"/>
+
+<p/>
 
 
