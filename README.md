@@ -117,5 +117,5 @@
 
 - In the example above, inbound traffic will first be evaluated through the NSG at the subnet level Any traffic allowed through the Subnet NSG will then be evaluated by VM NSG.
 - Same goes for outbound traffic, with VM NSG being evalauted first. Any traffic allowed through the VM NSG will then be evaluated by Subnet NSG.
-- This allows for double protection to the VM.
+- This allows for double protection to the VM, however, Microsoft does not recommend it unless you have a specific reason to. Rules from both NSGs can conflict with each other.
 - This use case would be appropriate when Security engineers want to allow inbound internet access to multiple frontend VMs in a subnet but restrict inbound access to other VMs like a database and other backend VMs).
