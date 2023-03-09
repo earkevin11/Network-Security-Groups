@@ -101,8 +101,20 @@
 
 <p/>
 
-
-# NSGs - Subnet level
+# NSGs - Subnet level OR NIC level
 - NSGs can be attached at the NIC or Subnet level only.
 - Rules will have to be created and applied at the subnet level and NIC level in order to work.
+- An individual subnet can have zero, or one, associated NSG.
+- An individual network interface can also have zero, or one, associated NSG, so you have have dual traffic restriction for a virtual machine by attaching an NSG to the subnet and to the Virtual Machine's NIC.
 
+# Example of a virtual machine having two NSGs, one attached to the subnet and one attached to the NIC.
+<p align="center">
+  
+<img src="https://user-images.githubusercontent.com/104326475/224161427-86e3427a-1970-4b5b-807b-d5fd939f7d5e.png" height="50%" width="50%" alt="NSGs"/>
+
+<p/>
+
+- In the example above, inbound traffic will first be evaluated through the NSG at the subnet level Any traffic allowed through the Subnet NSG will then be evaluated by VM NSG.
+- Same goes for outbound traffic, with VM NSG being evalauted first. Any traffic allowed through the VM NSG will then be evaluated by Subnet NSG.
+- This allows for double protection to the VM.
+- This use case would be appropriate when Security engineers want to allow inbound internet access to multiple frontend VMs in a subnet but restrict inbound access to other VMs like a database and other backend VMs).
