@@ -106,6 +106,7 @@
 - Rules will have to be created and applied at the subnet level and NIC level in order to work.
 - An individual subnet can have zero, or one, associated NSG.
 - An individual network interface can also have zero, or one, associated NSG, so you have have dual traffic restriction for a virtual machine by attaching an NSG to the subnet and to the Virtual Machine's NIC.
+- However, NSGs can be associated with many subnets and NIC as you choose.
 
 # Example of a virtual machine having two NSGs, one attached to the subnet and one attached to the NIC.
 <p align="center">
