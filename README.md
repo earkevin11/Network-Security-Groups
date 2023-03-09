@@ -21,28 +21,27 @@
 - Inbound rules are used for traffic that flows into the VM
 - Outbound rules are used for traffic that flows out of the VM
 - Admins can associate NSGs with multiple subnets and NIC.
-# There are 3 default rules created in NSG inbound rules
+
+# Default Inbound NSG inbound rules
+- *Remember* By default, users cannot RDP into a VM. You must specify a source IP.
+- *Remember* NSGs can attach to subnet or NIC only
+- The warning sign at the RDP rule signals that admins should not allow everybody to RDP into the VM.
 - 1. Allow all traffic within a VNet. This means if a VM tries to contact another VM within the same VNet. It will be allowed.
 - 2. Allow traffic onto a Azure Load Balancer
 - 3. All other traffic is denied inbound.
 
-# Outbound Traffic rules
-- 3 default rules in place
-- 1. Allow Vnet outbound if destination is in the same VNet
-- 2. Allow all internet outbound traffic
-- 3. Deny all other outbound traffic
-
-# Default inbound security rules
-- Remeber that by default, users cannot RDP into a VM
-- The warning sign at the RDP rule signals that admins should not allow everybody to RDP into the VM.
 <p align="center">
   
 <img src="https://user-images.githubusercontent.com/104326475/168944457-62c786fc-da63-4ecd-831e-fe6e510ce4df.png" height="350%" width="350%" alt="review of vnets and VMs"/>
 
 <p/>
 
+# Default Outbound NSGTraffic rules
+- *Remember* NSGs can attach to subnet or NIC only
+- 1. Allow Vnet outbound if destination is in the same VNet
+- 2. Allow all internet outbound traffic
+- 3. Deny all other outbound traffic
 
-# Default outbound security rules
 <p align="center">
   
 <img src="https://user-images.githubusercontent.com/104326475/168944519-8c59e200-8fbb-44c7-8a62-0e3296384a85.png" height="290%" width="290%" alt="review of vnets and VMs"/>
