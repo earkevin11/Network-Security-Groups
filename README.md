@@ -1,5 +1,20 @@
 # Network-Security-Groups
 
+# Think of security in layers, and the network layer is important. Remember the defense in depth model? Well, it's important to several layers to secure the network.
+- One tool you can use in Azure is Network Security Groups. 
+- When malicious actors has to invest time and energy to break into a company's network to gain access to resources, they are more likely to leave you alone.
+- Think of an Onion, which has several layers and it must be peeled to get to the inside!
+
+<p align="center">
+  
+<img src="https://user-images.githubusercontent.com/104326475/224156501-1c7f91da-7149-4896-ad80-6f43cf135486.png" height="50%" width="500%" alt="Layers of Onion Security"/>
+
+<p/>
+
+
+
+
+
 # What is the purpose of NSGs?
 - Provide a firewall like service using security rules.
 - It filters traffic inbound and outbound for VMs.
