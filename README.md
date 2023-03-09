@@ -37,7 +37,7 @@
 - The warning sign at the RDP rule signals that admins should not allow everybody to RDP into the VM.
 <p align="center">
   
-<img src="https://user-images.githubusercontent.com/104326475/168944457-62c786fc-da63-4ecd-831e-fe6e510ce4df.png" height="290%" width="290%" alt="review of vnets and VMs"/>
+<img src="https://user-images.githubusercontent.com/104326475/168944457-62c786fc-da63-4ecd-831e-fe6e510ce4df.png" height="350%" width="350%" alt="review of vnets and VMs"/>
 
 <p/>
 
