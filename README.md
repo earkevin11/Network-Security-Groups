@@ -39,7 +39,7 @@
 
 # Default Inbound NSG inbound rules
 - *Remember* By default, users cannot RDP into a VM. You must specify a source IP.
-- *Remember* NSGs can attach to subnet or NIC only. You can only apply one NSG to a subnet or network adapter (NIC)
+- *Remember* NSGs can attach to subnet or NIC only. You can only apply one NSG instance to a subnet and one NSG instance to a network adapter (NIC)
 - The warning sign at the RDP rule signals that admins should not allow everybody to RDP into the VM.
 - 1. Allow all traffic within a VNet. This means if a VM tries to contact another VM within the same VNet. It will be allowed.
 - 2. Allow traffic onto a Azure Load Balancer
